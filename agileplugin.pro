@@ -1,4 +1,4 @@
-QGIS_DIR = /home/matthieu/Apps/QGIS
+QGIS_DIR = $(HOME)/Apps/QGIS
 TEMPLATE = lib
 CONFIG = qt
 QT += xml widgets

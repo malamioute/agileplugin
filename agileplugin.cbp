@@ -19,6 +19,7 @@
 					<Add option="-s" />
 				</Linker>
 				<ExtraCommands>
+					<Add before="export QT_SELECT=qt5" />
 					<Add before="qmake agileplugin.pro" />
 				</ExtraCommands>
 				<MakeCommands>
@@ -38,7 +39,9 @@
 		<Unit filename="agileplugin.h" />
 		<Unit filename="agileplugin.pro" />
 		<Extensions>
-			<code_completion />
+			<code_completion>
+				<search_path add="$(HOME)/Apps/QGIS/include/qgis" />
+			</code_completion>
 			<debugger />
 		</Extensions>
 	</Project>

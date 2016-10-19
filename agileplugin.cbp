@@ -19,8 +19,7 @@
 					<Add option="-s" />
 				</Linker>
 				<ExtraCommands>
-					<Add before="export QT_SELECT=qt5" />
-					<Add before="qmake agileplugin.pro" />
+					<Add before="qmake -qt=4 agileplugin.pro" />
 				</ExtraCommands>
 				<MakeCommands>
 					<Build command="$make" />

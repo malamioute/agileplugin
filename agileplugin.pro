@@ -1,9 +1,8 @@
-QGIS_DIR = $(HOME)/Apps/QGIS
 TEMPLATE = lib
 CONFIG = qt
 QT += xml widgets
-LIBS += -L$$QGIS_DIR/lib -lqgis_core -lqgis_gui
-INCLUDEPATH += $$QGIS_DIR/include/qgis
+LIBS += -L/usr/lib -lqgis_core -lqgis_gui
+INCLUDEPATH += /usr/include/qgis/
 SOURCES = agileplugin.cpp
 HEADERS = agileplugin.h
 DEST = libagileplugin.so
@@ -16,5 +15,5 @@ MOC_DIR = build/.moc
 RCC_DIR = build/.rcc
 UI_DIR = build/.ui
 
-QMAKE_POST_LINK += $$quote(cp build/libagileplugin.so.1.0.0 $$QGIS_DIR/lib/qgis/plugins/libagileplugin.so)
+QMAKE_POST_LINK += $$quote(cp build/libagileplugin.so.1.0.0 /usr/lib/qgis/plugins/libagileplugin.so)
 
